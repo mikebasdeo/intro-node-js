@@ -14,6 +14,7 @@ program
     prompt(newContactPrompts).then(({ firstName, lastName, phoneNumber }) => {
       const key = firstName + ' ' + lastName;
       const contacts = getContacts();
+      console.log(contacts)
       contacts[key] = { firstName, lastName, phoneNumber };
       saveContacts(contacts);
     });

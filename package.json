@@ -14,9 +14,11 @@
     "body-parser": "^1.18.3",
     "commander": "^5.1.0",
     "express": "^4.16.3",
+    "http": "^0.0.1-security",
     "inquirer": "^7.1.0",
-    "mime": "^2.3.1",
+    "mime": "^2.4.5",
     "morgan": "^1.9.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "url": "^0.11.0"
   }
 }

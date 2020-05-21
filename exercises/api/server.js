@@ -9,7 +9,7 @@ const path = require('path')
  */
 const findAsset = (name) => {
   const assetPath = path.join(__dirname, 'assets', name)
-  return fs.readFileSync(assetPath, {encoding: 'utf-8'}).toString()
+  return fs.readFileSync(assetPath, { encoding: 'utf-8' }).toString()
 }
 
 const hostname = '127.0.0.1'
@@ -23,7 +23,8 @@ const server = http.createServer((req, res) => {
   const route = url.parse(req.url).pathname
   // this is sloppy, especially with more assets, create a "router"
   if (route === '/') {
-    res.writeHead(200, {'Content-Type': 'text/html'})
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+
     res.write(findAsset('index.html'))
     logRequest(method, route, 200)
     res.end()
